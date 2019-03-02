@@ -4,6 +4,7 @@ from django.utils import timezone
 
 
 class ProfileUser(AbstractUser):
+    email = models.EmailField(null=False)
     tweets = models.IntegerField(default=0)
     followers = models.ManyToManyField("self")
 
